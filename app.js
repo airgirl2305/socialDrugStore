@@ -10,7 +10,7 @@ const createError = require('http-errors');
 const session = require('express-session');
 const FileStore = require('session-file-store')(session);
 
-const indexRouter = require('./routes/indexRouter'); // done
+const indexRouter = require('./routes/indexRouter');
 const accountRouter = require('./routes/accountRouter');
 const cartRouter = require('./routes/cartRouter');
 
@@ -40,8 +40,8 @@ app.use((req, res, next) => {
 });
 
 app.use('/', indexRouter);
-// app.use('/account', accountRouter);
-// app.use('/cart', cartRouter);
+app.use('/account', accountRouter);
+app.use('/cart', cartRouter);
 
 app.use((req, res, next) => {
   const error = createError(404, 'Запрашиваемой страницы не существует на сервере.');

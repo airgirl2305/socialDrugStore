@@ -11,6 +11,9 @@ module.exports = {
       title: {
         type: Sequelize.STRING
       },
+      discount: {
+        type: Sequelize.INTEGER
+      },
       drugId: {
         type: Sequelize.INTEGER,
         references:{

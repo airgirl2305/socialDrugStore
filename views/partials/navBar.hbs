@@ -1,0 +1,14 @@
+<nav className="clearfix mar-b-1">
+  <ul className="no-bullets no-margin no-padding right">
+    <li className="pipe-separate t-light-green left"><a href="/"> Главная </a></li>
+    {{#if user }}
+    <li className="pipe-separate t-light-green left"><a href="/account"> Личный кабинет </a></li>
+    <li className="pipe-separate t-light-green left"><a href="/cart"> Корзина </a></li>
+    <li className="pipe-separate t-light-green left"><a href="/account/logOut"> Выйти </a></li>
+    {{ else }}
+    <li className="pipe-separate t-light-green left"><a
+      href="/account/signUp"> Зарегистрироваться </a></li>
+    <li className="pipe-separate t-light-green left"><a href="/account/signIn"> Войти </a></li>
+    {{/if}}
+      </ul>
+</nav>

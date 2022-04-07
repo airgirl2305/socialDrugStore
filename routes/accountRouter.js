@@ -2,6 +2,15 @@ const router = require('express').Router();
 const bcrypt = require('bcrypt');
 const { User } = require('../db/models');
 
+//личный кабинет
+//нужна кнопка изменять имя пароль
+router.route('/')
+  .get((req, res) => {
+    
+    
+    res.render('account');
+  })
+
 router.route('/signup')
   .get((req, res) => {
     res.render('signUp');
@@ -26,10 +35,10 @@ router.route('/signup')
         return res.redirect('/');
       } catch (err) {
         console.log(err);
-        res.redirect('/user/signup');
+        res.redirect('/account/signup');
       }
     } else {
-      return res.redirect('/user/signup');
+      return res.redirect('/account/signup');
     }
   });
 
