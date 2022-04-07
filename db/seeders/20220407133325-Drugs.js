@@ -22,7 +22,7 @@ module.exports = {
     },
     {
       title: 'Эстер-С',
-      image: 'https://online.solgar.com.tr/WebSitesData/F9E05A2A-866F-411B-A80F-7B4990D4605E/mpt_Files/2065C239-93F0-4B26-AB18-67D775B7684C.jpg',
+      image: 'https://cdn.rigla.ru/media/catalog/product/cache/1e8ef93b9b4867ab9f3538dde2cb3b8a/3/4/34216-6-3-2-f-632fd9c0ae145d903e64eef1a76961077db32205_34216.jpg',
       inStock: "29",
       price: "2478",
       categoryId: "3",
@@ -31,7 +31,7 @@ module.exports = {
     },
     {
       title: 'Пенталгин',
-      image: 'https://online.solgar.com.tr/WebSitesData/F9E05A2A-866F-411B-A80F-7B4990D4605E/mpt_Files/2065C239-93F0-4B26-AB18-67D775B7684C.jpg',
+      image: 'https://evropharm.ru/Storage/pentalgin-n12-tab-bez-kodeina.jpg',
       inStock: "40",
       price: "183",
       categoryId: "1",
@@ -94,7 +94,7 @@ module.exports = {
     },
     {
       title: 'Випросал',
-      image: 'https://www.vidal.ru/upload/products/ekvapress.jpg',
+      image: 'https://d-apteka.ru/upload/iblock/ebc/gbsee7qqpfyt5fseg5kn87rthrezva23.jpg',
       inStock: "2",
       price: "396",
       categoryId: "10",
