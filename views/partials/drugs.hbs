@@ -1,0 +1,12 @@
+<section>
+    {{#each drugs}}
+<div class="card" style="width: 18rem;">
+    <img max-height="300px" src={{this.image}} />
+    <div class="card-body">
+        <h5 class="card-title">{{this.title}}</h5>
+        <p class="card-text">{{this.price}} рублей</p>
+        <button class="btn btn-primary"> Купить </button>
+    </div>
+    {{/each}}
+</div>
+</section>

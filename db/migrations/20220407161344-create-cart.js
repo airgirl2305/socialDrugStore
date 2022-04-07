@@ -1,24 +1,30 @@
 'use strict';
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('Users', {
+    await queryInterface.createTable('Carts', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      name: {
-        type: Sequelize.STRING
+      userId: {
+        type: Sequelize.INTEGER,
+        references:{
+          model:"Users",
+          key:"id"
+        },
+        onDelete:"CASCADE"
       },
-      email: {
-        type: Sequelize.STRING,
-        unique:true
+      drugsId: {
+        type: Sequelize.INTEGER,
+        references:{
+          model:"Drugs",
+          key:"id"
+        },
+        onDelete:"CASCADE"
       },
-      password: {
-        type: Sequelize.TEXT
-      },
-      isManager: {
+      orderStatus: {
         type: Sequelize.BOOLEAN
       },
       createdAt: {
@@ -32,6 +38,6 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('Users');
+    await queryInterface.dropTable('Carts');
   }
 };
