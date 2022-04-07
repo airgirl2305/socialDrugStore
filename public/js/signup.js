@@ -22,15 +22,15 @@ document.forms.signupForm?.addEventListener('submit', async (event) => {
         email: event.target.email.value,
         password: event.target.password.value,
       }),
-    })
+    });
   } catch (err) {
-    return failSignup(event.target)
+    return failSignup(event.target);
   }
   if (response.status !== 200) {
-    return failSignup(event.target)
+    return failSignup(event.target);
   }
-  return window.location.assign('/private')
-})
+  return window.location.assign('/private');
+});
 
 // Очищаем кастомные сообщения об ошибках при новом вводе
 if (document.forms.signupForm) {
@@ -39,7 +39,7 @@ if (document.forms.signupForm) {
     document.forms.signupForm.email,
     document.forms.signupForm.password,
   ].forEach((input) => input.addEventListener('input', (event) => {
-    event.target.setCustomValidity('')
-    event.target.checkValidity()
+    event.target.setCustomValidity('');
+    event.target.checkValidity();
   }))
 }
