@@ -59,6 +59,7 @@ router.route('/signin')
         req.session.user = {
           id: currentUser.id,
           name: currentUser.name,
+          isManager: (currentUser.isManager)
         };
         return res.redirect('/');
       }
