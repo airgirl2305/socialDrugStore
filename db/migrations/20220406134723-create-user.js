@@ -18,6 +18,9 @@ module.exports = {
       password: {
         type: Sequelize.STRING
       },
+      isManager: {
+        type: Sequelize.BOOLEAN
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

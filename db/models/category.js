@@ -10,7 +10,6 @@ module.exports = (sequelize, DataTypes) => {
   }
   Category.init({
     title: DataTypes.STRING,
-    drugId: DataTypes.INTEGER,
     discount: DataTypes.INTEGER
   }, {
     sequelize,

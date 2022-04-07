@@ -14,14 +14,6 @@ module.exports = {
       discount: {
         type: Sequelize.INTEGER
       },
-      drugId: {
-        type: Sequelize.INTEGER,
-        references:{
-          model:"Drugs",
-          key:"id"
-        },
-        onDelete:"CASCADE"
-      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
@@ -29,12 +21,6 @@ module.exports = {
       updatedAt: {
         allowNull: false,
         type: Sequelize.DATE
-      }
-    }, {
-      uniqueKeys: {
-        actions_unique: {
-          fields: ['drugId']
-        }
       }
     });
   },
