@@ -12,7 +12,9 @@
                 <img alt="товар" src={{this.image}} />
                 <div class="card-body">
                     <h6 class="card-title"> {{this.title}} </h6>
+                    {{#if ../user.isManager}}
                     <button class="btn btn-primary" id="take-button"> В корзину </button>
+{{/if}}
                     </div>
             {{/each}}
         {{/if}}
