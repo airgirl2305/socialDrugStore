@@ -1,7 +1,30 @@
-account.hbs
+<p> На этой странице Вы можете изменить данные вашей учётной записи:</p>
 
-имя - кнопка смены имени
-логин
-пароль - кнопка смены
-
-кнопка отправки
+<table class="table table-borderless">
+    <thead>
+    <tr>
+        <th scope="col"></th>
+        <th scope="col">Актуально</th>
+        <th scope="col">Обновить</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <th scope="row">Пользователь:</th>
+        <td>{{user.name}}</td>
+        <td><input placeholder="новый логин"></input></td>
+    </tr>
+    <tr>
+        <th scope="row">Пароль:</th>
+        <td>{{user.password}}</td>
+        <td><input placeholder="новый пароль"></input></td>
+    </tr>
+    <tr>
+        <th scope="row">Email:</th>
+        <td>{{user.email}}</td>
+        <td>
+            <button type="button" class="btn btn-primary"> Отправить изменения </button>
+        </td>
+    </tr>
+    </tbody>
+</table>
