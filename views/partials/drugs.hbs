@@ -1,12 +1,23 @@
-<section>
-    {{#each drugs}}
-<div class="card" style="width: 18rem;">
-    <img max-height="300px" src={{this.image}} />
-    <div class="card-body">
-        <h5 class="card-title">{{this.title}}</h5>
-        <p class="card-text">{{this.price}} рублей</p>
-        <button class="btn btn-primary"> Купить </button>
+<div class="row">
+    <div class="col-4">
+<div id="drug-container">
+<!--       drugsWithActualPrices-->
+                    {{#each drugs}}
+            <div data-id={{id}}>
+                <img alt="товар" src={{this.image}} />
+                <div class="card-body">
+                    <h5 class="card-title"> {{this.title}} </h5>
+                    {{#if this.price}}
+                        <p class="card-text"> {{this.price}} рублей </p>
+                    {{else}}
+                        <p>Бесплатно</p>
+                    {{/if}}
+                    <button class="btn btn-primary" id="buy-button"> В корзину </button>
+            {{#if user.isManager}}
+                    nheb <button class="btn btn-primary" id="delete-button"> Удалить </button>
+            {{/if}}
+                </div>
+            {{/each}}
     </div>
-    {{/each}}
-</div>
-</section>
+    </div>    </div>
+    </div>

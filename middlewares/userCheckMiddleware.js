@@ -1,4 +1,4 @@
-const checkUser = (req, res, next) => { // если залогиненный юзер у сессии
+const checkUser = (req, res, next) => {
   if (req.session.user) {
     next();
   } else {

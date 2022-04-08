@@ -1,4 +1,5 @@
-require('dotenv').config();
+require('dotenv')
+  .config();
 
 const express = require('express');
 const logger = require('morgan');
@@ -56,10 +57,10 @@ app.use((err, req, res, next) => {
   } else {
     error = {};
   }
-
+  
   res.locals.message = err.message;
   res.locals.error = error;
-
+  
   res.status(err.status || 500);
   res.render('error');
 });

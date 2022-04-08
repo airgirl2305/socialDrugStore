@@ -1,3 +1,7 @@
+# IntellijIdea files
+*.iml
+.idea
+out
 # Logs
 logs
 *.log

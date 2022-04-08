@@ -15,7 +15,7 @@ if (deleteCartItemButton) {
       const drugDiv = event.target.closest('div');
       const drugId = drugDiv.dataset.id;
     
-      const response = await fetch(`/${taskId}`, {
+      const response = await fetch(`/${drugId}`, {
         method: 'DELETE',
       });
     // const responseJson = await response.json();
@@ -31,17 +31,17 @@ if (deleteCartItemButton) {
     // }
     
     window.location = '/cart';
-  })
-
-
-
-
-
-
-
-
+  }})}
 
 
 
 // выбрать адрес
 // указать телефон - можно в базу данных в аккаунт
+
+
+
+
+
+
+
+
