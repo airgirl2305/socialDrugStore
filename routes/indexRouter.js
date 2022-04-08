@@ -18,7 +18,6 @@ router.route('/')
     let drugsWithActualPrices = JSON.parse(JSON.stringify(drugs)).map((el) => {
       return{...el, price:el.price = (el.week) ? 0 : ((el.discount) ? el.price - (el.price * el.discount) : el.price)};
     });// пока undefined
-    console.log(drugsWithActualPrices[0]);
     
     //дата на лэйаут
     let today = new Date();
