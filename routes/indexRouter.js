@@ -16,7 +16,8 @@ router.route('/')
     
     // Цена, если в таблице есть указание на бесплатность по неделе во Freedrugs - 0,
     // указываем цену со скидкой, если указан процент в таблице Categories
-    let drugsWithActualPrices = drugs.map((el) => {return el.price = (el.week) ? 0 : ((el.percent) ? el.price - (el.price * el.percent) : el.price)
+    let drugsWithActualPrices = JSON.parse(JSON.stringify(drugs)).map((el) => {
+      return{...el, price:el.price = (el.week) ? 0 : ((el.discount) ? el.price - (el.price * el.discount) : el.price)};
     });// пока undefined
     
     //дата на лэйаут
@@ -29,7 +30,7 @@ router.route('/')
     let date = today.toLocaleDateString('en-GB');
     let dateInFull = getWeekDay() + ', ' + date;
     
-    //res.render('index', 'calendar', {
+/* res.render('index', 'calend', { */
     res.render('index', {
       drugsWithActualPrices,
       drugs,

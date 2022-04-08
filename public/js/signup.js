@@ -41,5 +41,5 @@ if (document.forms.signupForm) {
   ].forEach((input) => input.addEventListener('input', (event) => {
     event.target.setCustomValidity('');
     event.target.checkValidity();
-  }))
+  }));
 }

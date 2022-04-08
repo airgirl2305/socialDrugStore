@@ -7,6 +7,7 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
     }
   }
+  
   User.init({
     name: DataTypes.STRING,
     email: DataTypes.STRING,

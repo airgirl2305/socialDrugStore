@@ -4,7 +4,8 @@ const { User } = require('../db/models');
 
 router.route('/')
   .get((req, res) => {
-    res.render('account');
+    //let login = name[0].toUpperCase() + name.slice(1);
+    res.render('account'); //    res.render('account', login);
   })
 
 router.route('/signup')
@@ -27,6 +28,8 @@ router.route('/signup')
         req.session.user = {
           id: newUser.id,
           name: newUser.name,
+          email: newUser.email,//
+          password: newUser.password,//
         };
         return res.redirect('/');
       } catch (err) {
@@ -73,7 +76,5 @@ router.route('/logOut')
     res.clearCookie('sid')
       .redirect('/');
   });
-
-
 
 module.exports = router;

@@ -1,23 +1,29 @@
 <div class="row">
     <div class="col-4">
-<div id="drug-container">
-<!--       drugsWithActualPrices-->
-                    {{#each drugs}}
-            <div data-id={{id}}>
-                <img alt="товар" src={{this.image}} />
-                <div class="card-body">
-                    <h5 class="card-title"> {{this.title}} </h5>
-                    {{#if this.price}}
-                        <p class="card-text"> {{this.price}} рублей </p>
-                    {{else}}
-                        <p>Бесплатно</p>
-                    {{/if}}
-                    <button class="btn btn-primary" id="buy-button"> В корзину </button>
-            {{#if user.isManager}}
-                    nheb <button class="btn btn-primary" id="delete-button"> Удалить </button>
-            {{/if}}
+        <div id="drug-container">
+            <!--       drugsWithActualPrices-->
+            {{#each drugs}}
+                <div data-id={{id}}>
+                    <img alt="товар" src={{image}} />
+                    <div class="card-body">
+                        <h5 class="card-title"> {{title}} </h5>
+                        {{#if this.price}}
+                            <p class="card-text"> {{price}} рублей </p>
+                        {{else}}
+                            <p>Бесплатно</p>
+                        {{/if}}
+
+
+                        {{#if ../user.isManager}}
+                            <button class="btn btn-primary" id="delete-button"> Удалить</button>
+                            <button class="btn btn-primary" id="price-change-button"> Изменить</button>
+                        {{else}}
+                            <button class="btn btn-primary" id="buy-button"> В корзину</button>
+                        {{/if}}
+                    </div>
+
                 </div>
             {{/each}}
+        </div>
     </div>
-    </div>    </div>
-    </div>
+</div>
