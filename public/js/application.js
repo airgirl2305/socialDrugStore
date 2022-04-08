@@ -52,14 +52,11 @@
 //     window.location = '/entries';
 //   });
 
-
 // на  кнопку купить
-  drugWrapper.addEventListener('click', async (e) => {
-    if (e.target.innerText === 'Купить') {
-      const card = e.target.closest('[data-id]');
-      const { id } = card.dataset;
-      const response = await fetch(`/post/${id}`, {
-        method: 'DELETE',
-      });
-      
-    }
+drugWrapper.addEventListener('click', async (e) => {
+  if (e.target.innerText === 'Купить') {
+    const card = e.target.closest('[data-id]');
+    const { id } = card.dataset;
+    const response = await fetch(`/${id}`, {method: 'DELETE' });
+  }})
+

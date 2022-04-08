@@ -1,0 +1,40 @@
+<section>
+<p> Сегодня: {{dateInFull}} </p>
+</section>
+
+<section>
+    <h5> Бесплатно на этой неделе: </h5>
+    <div class="discount" id="week1-container">
+        {{#if freeDrugs1week}}
+            {{#each freeDrugs1week}}
+            <div class="card" style="width: 18rem;">
+            <div data-id={{id}}>
+                <img alt="товар" src={{this.image}} />
+                <div class="card-body">
+                    <h6 class="card-title"> {{this.title}} </h6>
+                    <button class="btn btn-primary" id="take-button"> В корзину </button>
+                    </div>
+            {{/each}}
+        {{/if}}
+    </div>
+    </div>
+    </div>
+</section>
+<section>
+    <h5> Бесплатно на следующей неделе: </h5>
+    <div  class="discount" id="week2-container">
+        {{#if freeDrugs2week}}
+            {{#each freeDrugs2week}}
+            <div class="card" style="width: 18rem;">
+            <div data-id={{id}}>
+                <img alt="товар" src={{this.image}} />
+                <div class="card-body">
+                    <h6 class="card-title"> {{this.title}} </h6>
+                    <button class="btn btn-primary" id="take-button"> В корзину </button>
+                </div>
+            {{/each}}
+        {{/if}}
+    </div>
+    </div>
+    </div>
+</section>

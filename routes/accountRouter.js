@@ -2,12 +2,8 @@ const router = require('express').Router();
 const bcrypt = require('bcrypt');
 const { User } = require('../db/models');
 
-//личный кабинет
-//нужна кнопка изменять имя пароль
 router.route('/')
   .get((req, res) => {
-    
-    
     res.render('account');
   })
 
@@ -77,5 +73,7 @@ router.route('/logOut')
     res.clearCookie('sid')
       .redirect('/');
   });
+
+
 
 module.exports = router;
